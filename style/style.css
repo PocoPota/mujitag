@@ -84,7 +84,7 @@ footer ul li a:hover {
   user-select: none;
 }
 #index .selectBox .selectOption:hover {
-  filter: none;
+  filter: drop-shadow(0px 0px 1px rgba(168, 168, 168, 0.6));
   cursor: pointer;
 }
 #index .selectBox .selectOption img {
