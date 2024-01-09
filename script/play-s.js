@@ -35,21 +35,23 @@ document.getElementById('load').onclick = function () {
     }
     chara.onload = () => {
         ctx.drawImage(chara, 0, 0);
+        outText();
     };
 
-    // valueの値取得
-    let valAa = document.getElementById('text-a').value;
-    let valC = document.getElementById('text-b').value;
-    let valD = document.getElementById('text-c').value;
-    let valFa = document.getElementById('text-da').value;
-    let valFb = document.getElementById('text-db').value;
-    let valFc = document.getElementById('text-dc').value;
-    let valFd = document.getElementById('text-dd').value;
-    let valFe = document.getElementById('text-de').value;
-    let valG = document.getElementById('text-e').value;
 
     // canvasへ出力する内容,文字のスタイル
     function outText() {
+        // valueの値取得
+        let valAa = document.getElementById('text-a').value;
+        let valC = document.getElementById('text-b').value;
+        let valD = document.getElementById('text-c').value;
+        let valFa = document.getElementById('text-da').value;
+        let valFb = document.getElementById('text-db').value;
+        let valFc = document.getElementById('text-dc').value;
+        let valFd = document.getElementById('text-dd').value;
+        let valFe = document.getElementById('text-de').value;
+        let valG = document.getElementById('text-e').value;
+
         ctx.font = "bold 45px Noto Sans JP, sans-serif";
         ctx.textAlign = 'center';
         ctx.fillText(`${valAa}`, 680 / 2, 58);
@@ -86,9 +88,6 @@ document.getElementById('load').onclick = function () {
         ctx.textAlign = 'right';
         ctx.fillText(`${valG}`, 647, 647);
     }
-
-    // クリックされて0.5ミリ秒後にoutTextを発動
-    setTimeout(outText, 0.5);
 }
 
 // ダウンロード

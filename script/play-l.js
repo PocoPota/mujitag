@@ -35,29 +35,30 @@ document.getElementById('load').onclick = function () {
     }
     chara.onload = () => {
         ctx.drawImage(chara, 0, 0);
+        outText();
     };
-
-    // valueの値取得
-    let valAa = document.getElementById('text-aa').value;
-    let valAb = document.getElementById('text-ab').value;
-    let valAc = document.getElementById('text-ac').value;
-    let valB = document.getElementById('text-b').value;
-    let valC = document.getElementById('text-c').value;
-    let valD = document.getElementById('text-d').value;
-    let valEa = document.getElementById('text-ea').value;
-    let valEb = document.getElementById('text-eb').value;
-    let valFa = document.getElementById('text-fa').value;
-    let valFb = document.getElementById('text-fb').value;
-    let valFc = document.getElementById('text-fc').value;
-    let valFd = document.getElementById('text-fd').value;
-    let valFe = document.getElementById('text-fe').value;
-    let valFf = document.getElementById('text-ff').value;
-    let valFg = document.getElementById('text-fg').value;
-    let valFh = document.getElementById('text-fh').value;
-    let valG = document.getElementById('text-g').value;
 
     // canvasへ出力する内容,文字のスタイル
     function outText() {
+        // valueの値取得
+        let valAa = document.getElementById('text-aa').value;
+        let valAb = document.getElementById('text-ab').value;
+        let valAc = document.getElementById('text-ac').value;
+        let valB = document.getElementById('text-b').value;
+        let valC = document.getElementById('text-c').value;
+        let valD = document.getElementById('text-d').value;
+        let valEa = document.getElementById('text-ea').value;
+        let valEb = document.getElementById('text-eb').value;
+        let valFa = document.getElementById('text-fa').value;
+        let valFb = document.getElementById('text-fb').value;
+        let valFc = document.getElementById('text-fc').value;
+        let valFd = document.getElementById('text-fd').value;
+        let valFe = document.getElementById('text-fe').value;
+        let valFf = document.getElementById('text-ff').value;
+        let valFg = document.getElementById('text-fg').value;
+        let valFh = document.getElementById('text-fh').value;
+        let valG = document.getElementById('text-g').value;
+
         ctx.font = "bold 45px Noto Sans JP, sans-serif";
         ctx.textAlign = 'center';
         ctx.fillText(`${valAa}`, 699 / 2, 58);
@@ -126,9 +127,6 @@ document.getElementById('load').onclick = function () {
         ctx.textAlign = 'right';
         ctx.fillText(`${valG}`, 338, 1124);
     }
-
-    // クリックされて0.5ミリ秒後にoutTextを発動
-    setTimeout(outText, 0.5);
 }
 
 // ダウンロード
