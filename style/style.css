@@ -31,6 +31,7 @@ header a:hover {
 }
 
 main {
+  width: 800px;
   min-height: calc(100vh - 60px - 40px);
   overflow: hidden;
 }
@@ -57,7 +58,6 @@ footer ul li a:hover {
 }
 
 #index {
-  width: 800px;
   margin: 0 auto;
 }
 #index article {
@@ -66,6 +66,7 @@ footer ul li a:hover {
 }
 #index .selectBox {
   margin-top: 60px;
+  margin-bottom: 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -98,7 +99,6 @@ footer ul li a:hover {
 }
 
 #play {
-  width: 800px;
   margin: 0 auto;
 }
 #play section {
@@ -123,4 +123,52 @@ footer ul li a:hover {
 #play #square canvas {
   width: 340px;
   height: 340px;
+}
+
+@media (430px <= width <= 820px) {
+  main {
+    width: 90%;
+  }
+  #play section {
+    flex-direction: column;
+    margin-top: 25px;
+  }
+  #play section canvas {
+    margin: 0 auto;
+  }
+  #play section #customize {
+    width: 340px;
+    margin: 15px auto 30px auto;
+  }
+}
+@media (width < 430px) {
+  main {
+    width: 95%;
+  }
+  footer {
+    height: 100px;
+  }
+  footer ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+  #index .selectBox .selectOption {
+    width: 280px;
+  }
+  #play section {
+    flex-direction: column;
+    margin-top: 25px;
+  }
+  #play section #customize {
+    width: 100%;
+    margin: 15px auto 30px auto;
+  }
+  #play #long canvas {
+    width: 100%;
+    height: 167.6680972818%;
+  }
+  #play #square canvas {
+    width: 100%;
+    height: 100%;
+  }
 }
