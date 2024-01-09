@@ -44,6 +44,7 @@ header {
 
 main {
     min-height: calc(100vh - 60px - 40px);
+    overflow: hidden;
 }
 
 footer {
@@ -76,7 +77,6 @@ footer {
 #index {
     width: 800px;
     margin: 0 auto;
-    overflow: hidden;
 
     article {
         text-align: center;
@@ -117,6 +117,35 @@ footer {
                 font-weight: 600;
                 margin-left: 3px;
             }
+        }
+    }
+}
+#play{
+    width: 800px;
+    margin: 0 auto;
+    section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 65px;
+        #customize{
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+    }
+    #long{
+        canvas{
+            width: 340px;
+            height: calc(340px * (1172/699));
+        }
+    }
+
+    #square{
+        canvas{
+            width: 340px;
+            height: 340px;
         }
     }
 }

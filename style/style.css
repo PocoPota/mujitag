@@ -33,6 +33,7 @@ header a:hover {
 
 main {
   min-height: calc(100vh - 60px - 40px);
+  overflow: hidden;
 }
 
 footer {
@@ -59,7 +60,6 @@ footer ul li a:hover {
 #index {
   width: 800px;
   margin: 0 auto;
-  overflow: hidden;
 }
 #index article {
   text-align: center;
@@ -96,4 +96,29 @@ footer ul li a:hover {
   font-size: 18px;
   font-weight: 600;
   margin-left: 3px;
+}
+
+#play {
+  width: 800px;
+  margin: 0 auto;
+}
+#play section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 65px;
+}
+#play section #customize {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#play #long canvas {
+  width: 340px;
+  height: 570.0715307582px;
+}
+#play #square canvas {
+  width: 340px;
+  height: 340px;
 }
