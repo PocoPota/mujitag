@@ -2,10 +2,20 @@
 let canvas = document.getElementById("cv");
 let ctx = canvas.getContext("2d");
 
+// 画像カラーの取得
+const url = new URL(window.location.href);
+const color = url.searchParams.get('c');
+
 window.onload = () => {
     // 画像読み込み
     let chara = new Image();
-    chara.src = "../images/long.png"; // 画像のURLを指定
+    // 使用画像分岐
+    if (color === 'w') {
+        chara.src = "../images/long-white.png";
+    } else {
+        // 色指定なしの場合も茶色
+        chara.src = "../images/long.png";
+    }
     chara.onload = () => {
         ctx.drawImage(chara, 0, 0);
     };
@@ -16,7 +26,13 @@ document.getElementById('load').onclick = function () {
     ctx.clearRect(0, 0, 699, 1172);
 
     let chara = new Image();
-    chara.src = "../images/long.png"; // 画像のURLを指定
+    // 使用画像分岐
+    if (color === 'w') {
+        chara.src = "../images/long-white.png";
+    } else {
+        // 色指定なしの場合も茶色
+        chara.src = "../images/long.png";
+    }
     chara.onload = () => {
         ctx.drawImage(chara, 0, 0);
     };
