@@ -19,9 +19,17 @@ window.onload = () => {
     chara.onload = () => {
         ctx.drawImage(chara, 0, 0);
     };
+
+    // inputが変更される度load()実行
+    const allInputs = document.querySelectorAll('.input');
+    allInputs.forEach(function (input) {
+        input.addEventListener('input', function () {
+            load();
+        });
+    });
 };
 
-document.getElementById('load').onclick = function () {
+function load() {
     // 前のcanvasの内容初期化
     ctx.clearRect(0, 0, 699, 1172);
 
