@@ -91,7 +91,7 @@ document.getElementById('load').onclick = function () {
 }
 
 // ダウンロード
-document.getElementById("dow-btn").onclick = (event) => {
+document.getElementById("download").onclick = (event) => {
     let link = document.createElement("a");
     link.href = canvas.toDataURL("image/png");
     link.download = "mujitag.png";
