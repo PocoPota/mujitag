@@ -5,7 +5,7 @@ let ctx = canvas.getContext("2d");
 window.onload = () => {
     // 画像読み込み
     let chara = new Image();
-    chara.src = "../images/square.PNG"; // 画像のURLを指定
+    chara.src = "../images/square.png"; // 画像のURLを指定
     chara.onload = () => {
         ctx.drawImage(chara, 0, 0);
     };
@@ -16,7 +16,7 @@ document.getElementById('load').onclick = function () {
     ctx.clearRect(0, 0, 680, 680);
 
     let chara = new Image();
-    chara.src = "../images/square.PNG"; // 画像のURLを指定
+    chara.src = "../images/square.png"; // 画像のURLを指定
     chara.onload = () => {
         ctx.drawImage(chara, 0, 0);
     };
